@@ -7,6 +7,7 @@ use Cart\Models\Product;
 use Slim\Views\Twig;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use Cart\Basket\Exceptions\QuantityExceededException;
 
 class ProductController
 {
