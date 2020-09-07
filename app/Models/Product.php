@@ -3,9 +3,12 @@
 namespace Cart\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cart\Models\Order;
 
 class Product extends Model
 {
+    public $quantity = null;
+
     public function hasLowStock()
     {
         if ($this->outOfStock()) {
@@ -28,5 +31,10 @@ class Product extends Model
     public function hasStock($quantity)
     {
         return $this->stock >= $quantity;
+    }
+
+    public function order()
+    {
+        $this->belongsToMany(Product::Class, 'orders_products')->withPivot('quantity');
     }
 }
