@@ -30,9 +30,9 @@ $capsule->bootEloquent();
 
 
 BTConfig::environment('sandbox');
-BTConfig::merchantId('995qhrp5sphbh5sr');
-BTConfig::publicKey('vw8jdpvz3myzf7yb');
-BTConfig::privateKey('602a7966a0dd96ca4b3e866c41159b27');
+BTConfig::merchantId('getInfoFromServerOwner');
+BTConfig::publicKey('getInfoFromServerOwner');
+BTConfig::privateKey('getInfoFromServerOwner');
 
 require __DIR__ . '/../app/routes.php';
 
